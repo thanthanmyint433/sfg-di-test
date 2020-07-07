@@ -1,9 +1,6 @@
 package com.springframework.demo;
 
-import com.springframework.demo.controller.ConstructorInjectedController;
-import com.springframework.demo.controller.Mycontroller;
-import com.springframework.demo.controller.PropertyInjectedController;
-import com.springframework.demo.controller.SetterInjectedController;
+import com.springframework.demo.controller.*;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -19,6 +16,10 @@ public class SfgDiTtmApplication {
 		Mycontroller mycontroller=(Mycontroller) ctx.getBean("mycontroller");
         System.out.println("----PRimary Bean----------");
 		System.out.println(mycontroller.sayHello());
+
+		System.out.println("I 18 Controller");
+		I18nController i18nController=(I18nController) ctx.getBean("i18nController");
+		System.out.println(i18nController.sayHello());
 
         System.out.println("----------PRoperty");
         PropertyInjectedController propertyInjectedController=(PropertyInjectedController) ctx.getBean("propertyInjectedController");
