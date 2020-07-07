@@ -1,5 +1,5 @@
 package com.springframework.demo.service;
 
-public interface GreetingService {
+public interface ConstructorGreetingService {
     String sayGreeting();
 }
