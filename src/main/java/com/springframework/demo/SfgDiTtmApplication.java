@@ -17,8 +17,8 @@ public class SfgDiTtmApplication {
 		ApplicationContext ctx=SpringApplication.run(SfgDiTtmApplication.class, args);
 
 		Mycontroller mycontroller=(Mycontroller) ctx.getBean("mycontroller");
-		String gree=mycontroller.sayHello();
-		System.out.println("Hello>>>>>>>>>>>>>."+ gree);
+        System.out.println("----PRimary Bean----------");
+		System.out.println(mycontroller.sayHello());
 
         System.out.println("----------PRoperty");
         PropertyInjectedController propertyInjectedController=(PropertyInjectedController) ctx.getBean("propertyInjectedController");

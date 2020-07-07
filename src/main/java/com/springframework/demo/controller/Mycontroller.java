@@ -1,11 +1,18 @@
 package com.springframework.demo.controller;
 
+import com.springframework.demo.service.ConstructorGreetingService;
 import org.springframework.stereotype.Controller;
 
 @Controller
 public class Mycontroller {
+    public final ConstructorGreetingService constructorGreetingService;
+
+    public Mycontroller(ConstructorGreetingService constructorGreetingService) {
+        this.constructorGreetingService = constructorGreetingService;
+    }
+
     public String sayHello(){
-        System.out.println("Hello World!");
-        return "Than Than Myint";
+
+        return constructorGreetingService.sayGreeting();
     }
 }
